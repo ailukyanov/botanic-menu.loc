@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>botanic-menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="menu__left">
+            <div class="menuButton">
+                <div class="menuButton__icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <span class="menuButton__label">
+                    Каталог товаров
+                </span>
+            </div>
+            <div class="menuButtonSubmenu">
+                <ul class="menuButtonSubmenu__list">
+                    <li class="menuButtonSubmenu__item">
+                        <a href="">test</a>
+
+                        <div class="menuButtonSubmenu__submenu">
+                            submenu 1
+                        </div>
+                    </li>
+                    <li class="menuButtonSubmenu__item">
+                        <a href="">test</a>
+
+                        <div class="menuButtonSubmenu__submenu">
+                            submenu 2
+                        </div>
+                    </li>
+                    <li class="menuButtonSubmenu__item">
+                        <a href="">test</a>
+
+                        <div class="menuButtonSubmenu__submenu">
+                            submenu 3
+                        </div>
+                    </li>
+                    <li class="menuButtonSubmenu__item">
+                        <a href="">test</a>
+
+                        <div class="menuButtonSubmenu__submenu">
+                            submenu 4
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu__right">
+            <ul class="menuList">
+                <li class="menuList__item">
+                    <a href="">О нас</a>
+                </li>
+                <li class="menuList__item">
+                    <a href="">
+                        <span class="menuList__icon">
+                            <img src="img/svg/discount.svg" alt="">
+                        </span>
+                        Акции
+                    </a>
+                </li>
+                <li class="menuList__item">
+                    <a href="">Доставка и оплата</a>
+                </li>
+                <li class="menuList__item">
+                    <a href="">Полезное</a>
+                </li>
+                <li class="menuList__item">
+                    <a href="">Контакты</a>
+                </li>
+                <li class="menuList__item">
+                    <a href="">Ещё</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/js/jquery-3.6.0.js"></script>
+    <script>
+        $('.menuButton').on('click', function () {
+            var self = $(this);
+
+            self.toggleClass('menuButton--active');
+        });
+
+        $(document).on('click', function(e) {
+            var $target = $(e.target);
+
+            if (
+                !$target.closest('.menuButton, .menuButtonSubmenu').length &&
+                $('.menuButton, .menuButtonSubmenu').is(":visible")
+            ) {
+                $('.menuButton').removeClass('menuButton--active');
+            }
+        });
+    </script>
+</body>
+</html>
