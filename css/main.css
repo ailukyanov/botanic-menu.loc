@@ -432,7 +432,8 @@ body {
       padding: 0 40px;
       border-left: 1px solid transparent;
       border-right: 1px solid transparent;
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      text-decoration: none; }
     .menuButtonSubmenu__item:hover a {
       position: relative;
       border-left: 1px solid #0B2101;
