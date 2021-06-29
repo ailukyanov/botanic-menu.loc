@@ -404,7 +404,7 @@ body {
       margin: auto;
       background-color: #0B2101;
       content: ""; }
-    .menuList__item:hover {
+    .menuList__item:hover, .menuList__item:active {
       background: #FAFFF6; }
 
 .menuButtonSubmenu {
@@ -423,23 +423,25 @@ body {
     border: 1px solid #0B2101; }
   .menuButtonSubmenu__item {
     margin: 0 -1px; }
-    .menuButtonSubmenu__item a {
+    .menuButtonSubmenu__item > a {
       display: flex;
       align-items: center;
-      height: 61px;
+      height: 58px;
       font-size: 14px;
       color: #0B2101;
-      padding: 0 40px;
+      padding: 0 10px;
       border-left: 1px solid transparent;
       border-right: 1px solid transparent;
       box-sizing: border-box;
       text-decoration: none; }
-    .menuButtonSubmenu__item:hover a {
+    .menuButtonSubmenu__item:first-child > a {
+      padding-left: 20px; }
+    .menuButtonSubmenu__item:hover > a {
       position: relative;
       border-left: 1px solid #0B2101;
       border-right: 1px solid #0B2101;
       background-color: #FAFFF7; }
-      .menuButtonSubmenu__item:hover a:before {
+      .menuButtonSubmenu__item:hover > a:before {
         position: absolute;
         top: 100%;
         left: 0;
@@ -460,3 +462,50 @@ body {
     border: 1px solid #0B2101;
     border-top: none;
     box-sizing: border-box; }
+
+.subSubmenu {
+  position: relative;
+  display: flex;
+  padding-left: 19px;
+  padding-bottom: 190px;
+  padding-top: 3px; }
+  .subSubmenu__box {
+    margin-right: 60px; }
+  .subSubmenu__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; }
+  .subSubmenu__item {
+    margin-bottom: 16px; }
+    .subSubmenu__item:last-child {
+      margin-bottom: 0; }
+    .subSubmenu__item a {
+      display: flex;
+      text-decoration: none;
+      font-size: 14px;
+      color: #0B2101; }
+      .subSubmenu__item a:hover {
+        color: #67A030; }
+  .subSubmenu__img {
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .subSubmenu__img img {
+      max-width: 100%; }
+  .subSubmenu__text {
+    display: flex;
+    align-items: center; }
+  .subSubmenu h3 {
+    font-weight: 500;
+    font-size: 14px;
+    color: #0B2101;
+    margin-bottom: 21px; }
+  .subSubmenu__link {
+    position: absolute;
+    bottom: 19px;
+    right: 18px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #0B2101;
+    text-decoration: underline; }
